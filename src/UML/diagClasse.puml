@@ -1,0 +1,30 @@
+@startuml
+
+class TableauEntier {
+  -tab : int[][]
+  +TableauEntier(t: int[][])
+  +valeurA(l: int, c: int) : int
+  +getLargeur() : int
+  +getHauteur() : int
+}
+
+abstract class Parcours {
+  -tabInt : TableauEntier
+  -ligneCour : int
+  -colonneCour : int
+  -nbParcourus : int
+  +Parcours(tI: TableauEntier)
+  +hasNext() : boolean
+  +next() : Integer
+  +suivant() : void
+}
+
+class ParcoursLigne {
+  +ParcoursLigne(tI: TableauEntier)
+  +suivant() : void
+}
+
+Parcours <|-- ParcoursLigne
+Parcours o-- TableauEntier
+
+@enduml
