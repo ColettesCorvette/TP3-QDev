@@ -23,12 +23,12 @@ public class TableauEntier
         return this.tab.length;
     }
 
-    /*
+
     public ParcoursLigne iterateurLigne()
     {
-
+        return new ParcoursLigne(this);
     }
-    */
+
 
 
 }
